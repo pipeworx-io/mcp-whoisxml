@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/whoisxml",
   "title": "Whoisxml",
   "description": "WhoisXML MCP — wraps WhoisXML API (whoisxmlapi.com)",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "websiteUrl": "https://pipeworx.io/packs/whoisxml",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-whoisxml",

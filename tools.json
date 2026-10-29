@@ -1,0 +1,86 @@
+[
+  {
+    "name": "whoisxml_whois",
+    "description": "Current WHOIS for <domain> — registrar, creation/expiry dates, registrant org, name servers, and status. Example: whoisxml_whois({ domain: \"google.com\", _apiKey: \"your-key\" })",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "domain": {
+          "type": "string",
+          "description": "Domain name to look up, e.g. \"google.com\" (no protocol)"
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "WhoisXML API key (get one at whoisxmlapi.com — one key works across all products)"
+        }
+      },
+      "required": [
+        "domain",
+        "_apiKey"
+      ]
+    }
+  },
+  {
+    "name": "whoisxml_whois_history",
+    "description": "Historical WHOIS records for <domain> — past registrars, registrants, and creation/expiry dates over time. Example: whoisxml_whois_history({ domain: \"google.com\", _apiKey: \"your-key\" })",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "domain": {
+          "type": "string",
+          "description": "Domain name to look up historical WHOIS for, e.g. \"google.com\""
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "WhoisXML API key"
+        }
+      },
+      "required": [
+        "domain",
+        "_apiKey"
+      ]
+    }
+  },
+  {
+    "name": "whoisxml_reverse_whois",
+    "description": "Find domains registered by <email/name/org> — reverse WHOIS lookup returning every domain whose current WHOIS record contains the search term. Example: whoisxml_reverse_whois({ term: \"admin@google.com\", _apiKey: \"your-key\" })",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "term": {
+          "type": "string",
+          "description": "Registrant email, name, or organization to search for, e.g. \"admin@google.com\" or \"Google LLC\""
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "WhoisXML API key"
+        }
+      },
+      "required": [
+        "term",
+        "_apiKey"
+      ]
+    }
+  },
+  {
+    "name": "whoisxml_dns",
+    "description": "DNS records for <domain> — A, AAAA, MX, NS, TXT, and other records with their values and TTLs. Example: whoisxml_dns({ domain: \"google.com\", _apiKey: \"your-key\" })",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "domain": {
+          "type": "string",
+          "description": "Domain name to resolve DNS records for, e.g. \"google.com\""
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "WhoisXML API key"
+        }
+      },
+      "required": [
+        "domain",
+        "_apiKey"
+      ]
+    }
+  }
+]
